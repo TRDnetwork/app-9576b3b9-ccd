@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.nyc_output/
+coverage/
+.env
+.env.local
+*.log
+.DS_Store
+.vercel

@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-pro",
+  "version": "1.0.0",
+  "description": "A responsive personal portfolio website with dynamic theme switching and interactive project showcase.",
+  "main": "index.html",
+  "scripts": {
+    "test": "vitest",
+    "preview": "npx serve"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "jsdom": "^24.0.0",
+    "serve": "^14.2.3"
+  },
+  "keywords": [
+    "portfolio",
+    "static",
+    "theme-toggle",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "Alex Rivera",
+  "license": "MIT"
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio Pro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Satoshi:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      /* Critical above-the-fold styles */
+      body {
+        margin: 0;
+        font-family: 'Satoshi', sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+        transition: background 0.5s, color 0.5s;
+      }
+      h1, h2, h3 {
+        font-family: 'Fraunces', serif;
+        font-weight: 600;
+        margin: 0;
+      }
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--surface);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .loading::after {
+        content: 'Loading...';
+        font-family: 'Satoshi', sans-serif;
+        font-size: 1.2rem;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div id="app" class="app">
+      <header class="header">
+        <nav class="nav container">
+          <a href="#hero" class="nav__logo">MyPortfolio</a>
+          <ul class="nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="hero" class="hero">
+          <div class="container hero__content">
+            <h1 class="hero__title">Hi, I'm <span class="highlight">Alex Rivera</span></h1>
+            <p class="hero__subtitle">Frontend Developer & UI Designer</p>
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about__grid">
+              <div class="about__text">
+                <p>
+                  I'm a passionate frontend developer focused on creating clean, responsive, and accessible web experiences. 
+                  With a background in design and engineering, I bridge aesthetics and functionality.
+                </p>
+                <p>
+                  My skills include HTML, CSS, JavaScript, React, and modern build tools. 
+                  I value performance, semantics, and user-centered design.
+                </p>
+                <div class="skills">
+                  <span class="skill">HTML5</span>
+                  <span class="skill">CSS3</span>
+                  <span class="skill">JavaScript</span>
+                  <span class="skill">React</span>
+                  <span class="skill">UI/UX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="projects">
+          <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+              <article class="project-card">
+                <img src="https://via.placeholder.com/600x400/f8f9fa/1a1a1a?text=Project+1" alt="Project 1" class="project-card__img" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">E-Commerce Dashboard</h3>
+                  <p class="project-card__desc">
+                    A responsive admin dashboard with real-time analytics, dark mode, and accessible controls.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>React</span>
+                    <span>Chart.js</span>
+                    <span>SCSS</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img src="https://via.placeholder.com/600x400/f8f9fa/1a1a1a?text=Project+2" alt="Project 2" class="project-card__img" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">TaskFlow App</h3>
+                  <p class="project-card__desc">
+                    Kanban-style task manager with drag-and-drop, local persistence, and team collaboration.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>Vue.js</span>
+                    <span>Draggable</span>
+                    <span>Node.js</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img src="https://via.placeholder.com/600x400/f8f9fa/1a1a1a?text=Project+3" alt="Project 3" class="project-card__img" />
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Lumen Photography</h3>
+                  <p class="project-card__desc">
+                    A minimalist portfolio site for a photographer with lightbox gallery and smooth scroll effects.
+                  </p>
+                  <div class="project-card__tags">
+                    <span>HTML/CSS</span>
+                    <span>GSAP</span>
+                    <span>Responsive</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Alex Rivera. Built with clean code and attention to detail.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
